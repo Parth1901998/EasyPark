@@ -14,6 +14,10 @@
 		DE9962E922EB053C00721BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */; };
 		DE9962F422EB053D00721BBC /* EasyParkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962F322EB053D00721BBC /* EasyParkTests.swift */; };
 		DE9962FF22EB053D00721BBC /* EasyParkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962FE22EB053D00721BBC /* EasyParkUITests.swift */; };
+		DE99630D22EB111C00721BBC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99630C22EB111C00721BBC /* NotificationViewController.swift */; };
+		DE99630F22EB120200721BBC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99630E22EB120200721BBC /* MapViewController.swift */; };
+		DE99631222EB13D500721BBC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE99631122EB13D500721BBC /* CoreLocation.framework */; };
+		DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99631422EB1A9700721BBC /* TotalBookingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		DE9962FA22EB053D00721BBC /* EasyParkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyParkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9962FE22EB053D00721BBC /* EasyParkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyParkUITests.swift; sourceTree = "<group>"; };
 		DE99630022EB053D00721BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE99630C22EB111C00721BBC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		DE99630E22EB120200721BBC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DE99631122EB13D500721BBC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DE99631422EB1A9700721BBC /* TotalBookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBookingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE99631222EB13D500721BBC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				DE9962F222EB053D00721BBC /* EasyParkTests */,
 				DE9962FD22EB053D00721BBC /* EasyParkUITests */,
 				DE9962DC22EB053C00721BBC /* Products */,
+				DE99631022EB13D500721BBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +107,10 @@
 		DE9962DD22EB053C00721BBC /* EasyPark */ = {
 			isa = PBXGroup;
 			children = (
+				DE99631722EB1B3200721BBC /* View */,
+				DE99631622EB1B1F00721BBC /* Controller */,
+				DE99631322EB1A6F00721BBC /* Model */,
 				DE9962DE22EB053C00721BBC /* AppDelegate.swift */,
-				DE9962E022EB053C00721BBC /* ViewController.swift */,
-				DE9962E222EB053C00721BBC /* Main.storyboard */,
 				DE9962E522EB053C00721BBC /* Assets.xcassets */,
 				DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */,
 				DE9962EA22EB053C00721BBC /* Info.plist */,
@@ -123,6 +134,40 @@
 				DE99630022EB053D00721BBC /* Info.plist */,
 			);
 			path = EasyParkUITests;
+			sourceTree = "<group>";
+		};
+		DE99631022EB13D500721BBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE99631122EB13D500721BBC /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE99631322EB1A6F00721BBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE99631422EB1A9700721BBC /* TotalBookingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE99631622EB1B1F00721BBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE99630C22EB111C00721BBC /* NotificationViewController.swift */,
+				DE99630E22EB120200721BBC /* MapViewController.swift */,
+				DE9962E022EB053C00721BBC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE99631722EB1B3200721BBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE9962E222EB053C00721BBC /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +303,9 @@
 			files = (
 				DE9962E122EB053C00721BBC /* ViewController.swift in Sources */,
 				DE9962DF22EB053C00721BBC /* AppDelegate.swift in Sources */,
+				DE99630D22EB111C00721BBC /* NotificationViewController.swift in Sources */,
+				DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */,
+				DE99630F22EB120200721BBC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

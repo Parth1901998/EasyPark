@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,45 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="7Sd-KU-GhR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P A R K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1So-n3-FdP">
+                                <rect key="frame" x="114.5" y="525" width="146" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.055466301739215851" green="0.56474816799163818" blue="0.54946905374526978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E A S Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boR-d7-HQO">
+                                <rect key="frame" x="117" y="442" width="141" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.043441005051136017" green="0.23666027188301086" blue="0.41989779472351074" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Sd-KU-GhR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6NC-SC-MdD"/>
+                            <constraint firstItem="1So-n3-FdP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="APw-i2-Kfe"/>
+                            <constraint firstItem="1So-n3-FdP" firstAttribute="top" secondItem="boR-d7-HQO" secondAttribute="bottom" constant="35" id="QTX-S7-Vos"/>
+                            <constraint firstItem="boR-d7-HQO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="Wyd-37-C3t"/>
+                            <constraint firstItem="7Sd-KU-GhR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cci-2v-VzS"/>
+                            <constraint firstItem="boR-d7-HQO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gWm-tc-jtJ"/>
+                            <constraint firstItem="boR-d7-HQO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="422" id="lxw-9d-mKI"/>
+                            <constraint firstItem="1So-n3-FdP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114.5" id="mtM-dQ-ZqR"/>
+                            <constraint firstItem="7Sd-KU-GhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n6i-Xx-N4t"/>
+                            <constraint firstItem="7Sd-KU-GhR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zW2-iB-Oaf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo1" width="256" height="256"/>
+    </resources>
 </document>
