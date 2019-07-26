@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE9962DF22EB053C00721BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962DE22EB053C00721BBC /* AppDelegate.swift */; };
+		DE9962E122EB053C00721BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962E022EB053C00721BBC /* ViewController.swift */; };
+		DE9962E422EB053C00721BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9962E222EB053C00721BBC /* Main.storyboard */; };
+		DE9962E622EB053C00721BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9962E522EB053C00721BBC /* Assets.xcassets */; };
+		DE9962E922EB053C00721BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */; };
+		DE9962F422EB053D00721BBC /* EasyParkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962F322EB053D00721BBC /* EasyParkTests.swift */; };
+		DE9962FF22EB053D00721BBC /* EasyParkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962FE22EB053D00721BBC /* EasyParkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE9962F022EB053D00721BBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE9962D322EB053C00721BBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9962DA22EB053C00721BBC;
+			remoteInfo = EasyPark;
+		};
+		DE9962FB22EB053D00721BBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE9962D322EB053C00721BBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9962DA22EB053C00721BBC;
+			remoteInfo = EasyPark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE9962DB22EB053C00721BBC /* EasyPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9962DE22EB053C00721BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE9962E022EB053C00721BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE9962E322EB053C00721BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE9962E522EB053C00721BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE9962E822EB053C00721BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE9962EA22EB053C00721BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9962EF22EB053D00721BBC /* EasyParkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyParkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9962F322EB053D00721BBC /* EasyParkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyParkTests.swift; sourceTree = "<group>"; };
+		DE9962F522EB053D00721BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9962FA22EB053D00721BBC /* EasyParkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyParkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9962FE22EB053D00721BBC /* EasyParkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyParkUITests.swift; sourceTree = "<group>"; };
+		DE99630022EB053D00721BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE9962D822EB053C00721BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962EC22EB053D00721BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962F722EB053D00721BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE9962D222EB053C00721BBC = {
+			isa = PBXGroup;
+			children = (
+				DE9962DD22EB053C00721BBC /* EasyPark */,
+				DE9962F222EB053D00721BBC /* EasyParkTests */,
+				DE9962FD22EB053D00721BBC /* EasyParkUITests */,
+				DE9962DC22EB053C00721BBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE9962DC22EB053C00721BBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE9962DB22EB053C00721BBC /* EasyPark.app */,
+				DE9962EF22EB053D00721BBC /* EasyParkTests.xctest */,
+				DE9962FA22EB053D00721BBC /* EasyParkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE9962DD22EB053C00721BBC /* EasyPark */ = {
+			isa = PBXGroup;
+			children = (
+				DE9962DE22EB053C00721BBC /* AppDelegate.swift */,
+				DE9962E022EB053C00721BBC /* ViewController.swift */,
+				DE9962E222EB053C00721BBC /* Main.storyboard */,
+				DE9962E522EB053C00721BBC /* Assets.xcassets */,
+				DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */,
+				DE9962EA22EB053C00721BBC /* Info.plist */,
+			);
+			path = EasyPark;
+			sourceTree = "<group>";
+		};
+		DE9962F222EB053D00721BBC /* EasyParkTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9962F322EB053D00721BBC /* EasyParkTests.swift */,
+				DE9962F522EB053D00721BBC /* Info.plist */,
+			);
+			path = EasyParkTests;
+			sourceTree = "<group>";
+		};
+		DE9962FD22EB053D00721BBC /* EasyParkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9962FE22EB053D00721BBC /* EasyParkUITests.swift */,
+				DE99630022EB053D00721BBC /* Info.plist */,
+			);
+			path = EasyParkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE9962DA22EB053C00721BBC /* EasyPark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE99630322EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyPark" */;
+			buildPhases = (
+				DE9962D722EB053C00721BBC /* Sources */,
+				DE9962D822EB053C00721BBC /* Frameworks */,
+				DE9962D922EB053C00721BBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyPark;
+			productName = EasyPark;
+			productReference = DE9962DB22EB053C00721BBC /* EasyPark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE9962EE22EB053D00721BBC /* EasyParkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE99630622EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkTests" */;
+			buildPhases = (
+				DE9962EB22EB053D00721BBC /* Sources */,
+				DE9962EC22EB053D00721BBC /* Frameworks */,
+				DE9962ED22EB053D00721BBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9962F122EB053D00721BBC /* PBXTargetDependency */,
+			);
+			name = EasyParkTests;
+			productName = EasyParkTests;
+			productReference = DE9962EF22EB053D00721BBC /* EasyParkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE9962F922EB053D00721BBC /* EasyParkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE99630922EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkUITests" */;
+			buildPhases = (
+				DE9962F622EB053D00721BBC /* Sources */,
+				DE9962F722EB053D00721BBC /* Frameworks */,
+				DE9962F822EB053D00721BBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9962FC22EB053D00721BBC /* PBXTargetDependency */,
+			);
+			name = EasyParkUITests;
+			productName = EasyParkUITests;
+			productReference = DE9962FA22EB053D00721BBC /* EasyParkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE9962D322EB053C00721BBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Parth Bhojak";
+				TargetAttributes = {
+					DE9962DA22EB053C00721BBC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DE9962EE22EB053D00721BBC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DE9962DA22EB053C00721BBC;
+					};
+					DE9962F922EB053D00721BBC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DE9962DA22EB053C00721BBC;
+					};
+				};
+			};
+			buildConfigurationList = DE9962D622EB053C00721BBC /* Build configuration list for PBXProject "EasyPark" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE9962D222EB053C00721BBC;
+			productRefGroup = DE9962DC22EB053C00721BBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE9962DA22EB053C00721BBC /* EasyPark */,
+				DE9962EE22EB053D00721BBC /* EasyParkTests */,
+				DE9962F922EB053D00721BBC /* EasyParkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE9962D922EB053C00721BBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9962E922EB053C00721BBC /* LaunchScreen.storyboard in Resources */,
+				DE9962E622EB053C00721BBC /* Assets.xcassets in Resources */,
+				DE9962E422EB053C00721BBC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962ED22EB053D00721BBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962F822EB053D00721BBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE9962D722EB053C00721BBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9962E122EB053C00721BBC /* ViewController.swift in Sources */,
+				DE9962DF22EB053C00721BBC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962EB22EB053D00721BBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9962F422EB053D00721BBC /* EasyParkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9962F622EB053D00721BBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9962FF22EB053D00721BBC /* EasyParkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE9962F122EB053D00721BBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9962DA22EB053C00721BBC /* EasyPark */;
+			targetProxy = DE9962F022EB053D00721BBC /* PBXContainerItemProxy */;
+		};
+		DE9962FC22EB053D00721BBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9962DA22EB053C00721BBC /* EasyPark */;
+			targetProxy = DE9962FB22EB053D00721BBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE9962E222EB053C00721BBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE9962E322EB053C00721BBC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE9962E822EB053C00721BBC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE99630122EB053D00721BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE99630222EB053D00721BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE99630422EB053D00721BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyPark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyPark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE99630522EB053D00721BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyPark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyPark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE99630722EB053D00721BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyParkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyParkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyPark.app/EasyPark";
+			};
+			name = Debug;
+		};
+		DE99630822EB053D00721BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyParkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyParkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyPark.app/EasyPark";
+			};
+			name = Release;
+		};
+		DE99630A22EB053D00721BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyParkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyParkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyPark;
+			};
+			name = Debug;
+		};
+		DE99630B22EB053D00721BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EasyParkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sa.EasyParkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyPark;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE9962D622EB053C00721BBC /* Build configuration list for PBXProject "EasyPark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE99630122EB053D00721BBC /* Debug */,
+				DE99630222EB053D00721BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE99630322EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyPark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE99630422EB053D00721BBC /* Debug */,
+				DE99630522EB053D00721BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE99630622EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE99630722EB053D00721BBC /* Debug */,
+				DE99630822EB053D00721BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE99630922EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE99630A22EB053D00721BBC /* Debug */,
+				DE99630B22EB053D00721BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE9962D322EB053C00721BBC /* Project object */;
+}
