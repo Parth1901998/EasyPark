@@ -11,9 +11,18 @@ import UIKit
 
 class TotalParkingModel
 {
-    var placeTitle    : String = ""
-    var placeName     : String = ""
-    var placeRating   : String = ""
-    var placeLot      : String = ""
-    var placeDistance : String = ""
+    var cityName          : String = ""
+    var placeImage        : UIImage?
+    var placeTitle        : String = ""
+    var placeName         : String = ""
+    var placeRating       : String = ""
+    var placeLot          : String = ""
+    var placeDistance     : String = ""
+    
+    var placeLotMessage : String = ""
+    var placeNumber     : String = ""
+    var placeAddress    : String = ""
+    var placeMoney      : String = ""
+    
+
 }

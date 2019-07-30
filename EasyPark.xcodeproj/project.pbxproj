@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71AE125895F22DBB680BF4AE /* Pods_EasyPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79257AFC09280B77854457 /* Pods_EasyPark.framework */; };
+		DE00B1B222F02750004CF1A9 /* ParkingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B122F02750004CF1A9 /* ParkingDetailViewController.swift */; };
+		DE00B1B422F05E40004CF1A9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */; };
+		DE00B1B622F076EA004CF1A9 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B522F076EA004CF1A9 /* UserProfileModel.swift */; };
+		DE0C794F22EF028A001348DD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C794E22EF028A001348DD /* SignUpViewController.swift */; };
+		DE0C795122EF0493001348DD /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */; };
+		DE0C795322EF059C001348DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C795222EF059C001348DD /* LoginViewController.swift */; };
+		DE0C795722EF1DA3001348DD /* MyBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C795622EF1DA3001348DD /* MyBookingViewController.swift */; };
 		DE9962DF22EB053C00721BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962DE22EB053C00721BBC /* AppDelegate.swift */; };
 		DE9962E122EB053C00721BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9962E022EB053C00721BBC /* ViewController.swift */; };
 		DE9962E422EB053C00721BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9962E222EB053C00721BBC /* Main.storyboard */; };
@@ -18,6 +26,10 @@
 		DE99630F22EB120200721BBC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99630E22EB120200721BBC /* MapViewController.swift */; };
 		DE99631222EB13D500721BBC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE99631122EB13D500721BBC /* CoreLocation.framework */; };
 		DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99631422EB1A9700721BBC /* TotalBookingModel.swift */; };
+		DEFBF42A22EEABEA000C3DCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEFBF42922EEABEA000C3DCC /* GoogleService-Info.plist */; };
+		DEFBF42E22EEB124000C3DCC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */; };
+		E56B8AC423407798AAD74AA3 /* Pods_EasyParkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F05943A333ACE3EC5A43A66 /* Pods_EasyParkUITests.framework */; };
+		F105290C0292DB935CDC024C /* Pods_EasyParkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A184B2D1E60EAD245D3BAAAD /* Pods_EasyParkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C79257AFC09280B77854457 /* Pods_EasyPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7D5E2F84BCEB1ECA2E5552 /* Pods-EasyParkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyParkTests.release.xcconfig"; path = "Target Support Files/Pods-EasyParkTests/Pods-EasyParkTests.release.xcconfig"; sourceTree = "<group>"; };
+		5ABB2A6DA6640DFB8EF2790E /* Pods-EasyPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPark.release.xcconfig"; path = "Target Support Files/Pods-EasyPark/Pods-EasyPark.release.xcconfig"; sourceTree = "<group>"; };
+		5F05943A333ACE3EC5A43A66 /* Pods_EasyParkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyParkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82257AC0F2C2E5E88D5EB1F1 /* Pods-EasyParkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyParkUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyParkUITests/Pods-EasyParkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89C1ABE0ED6AF319B01517F0 /* Pods-EasyParkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyParkTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyParkTests/Pods-EasyParkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A31B4F45C32F0FBABE9AE94 /* Pods-EasyParkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyParkUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyParkUITests/Pods-EasyParkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9BED6DA03F4567D7F627FDAB /* Pods-EasyPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPark.debug.xcconfig"; path = "Target Support Files/Pods-EasyPark/Pods-EasyPark.debug.xcconfig"; sourceTree = "<group>"; };
+		A184B2D1E60EAD245D3BAAAD /* Pods_EasyParkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyParkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE00B1B122F02750004CF1A9 /* ParkingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParkingDetailViewController.swift; path = EasyPark/Controller/ParkingDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = EasyPark/Controller/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		DE00B1B522F076EA004CF1A9 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		DE0C794E22EF028A001348DD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
+		DE0C795222EF059C001348DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE0C795622EF1DA3001348DD /* MyBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingViewController.swift; sourceTree = "<group>"; };
 		DE9962DB22EB053C00721BBC /* EasyPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9962DE22EB053C00721BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9962E022EB053C00721BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +83,8 @@
 		DE99630E22EB120200721BBC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DE99631122EB13D500721BBC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE99631422EB1A9700721BBC /* TotalBookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBookingModel.swift; sourceTree = "<group>"; };
+		DEFBF42922EEABEA000C3DCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE99631222EB13D500721BBC /* CoreLocation.framework in Frameworks */,
+				71AE125895F22DBB680BF4AE /* Pods_EasyPark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F105290C0292DB935CDC024C /* Pods_EasyParkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +109,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56B8AC423407798AAD74AA3 /* Pods_EasyParkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1320D067781039C89C78A6E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6DA03F4567D7F627FDAB /* Pods-EasyPark.debug.xcconfig */,
+				5ABB2A6DA6640DFB8EF2790E /* Pods-EasyPark.release.xcconfig */,
+				89C1ABE0ED6AF319B01517F0 /* Pods-EasyParkTests.debug.xcconfig */,
+				2F7D5E2F84BCEB1ECA2E5552 /* Pods-EasyParkTests.release.xcconfig */,
+				82257AC0F2C2E5E88D5EB1F1 /* Pods-EasyParkUITests.debug.xcconfig */,
+				8A31B4F45C32F0FBABE9AE94 /* Pods-EasyParkUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DE9962D222EB053C00721BBC = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +137,7 @@
 				DE9962FD22EB053D00721BBC /* EasyParkUITests */,
 				DE9962DC22EB053C00721BBC /* Products */,
 				DE99631022EB13D500721BBC /* Frameworks */,
+				1320D067781039C89C78A6E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +161,7 @@
 				DE9962E522EB053C00721BBC /* Assets.xcassets */,
 				DE9962E722EB053C00721BBC /* LaunchScreen.storyboard */,
 				DE9962EA22EB053C00721BBC /* Info.plist */,
+				DEFBF42922EEABEA000C3DCC /* GoogleService-Info.plist */,
 			);
 			path = EasyPark;
 			sourceTree = "<group>";
@@ -140,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				DE99631122EB13D500721BBC /* CoreLocation.framework */,
+				2C79257AFC09280B77854457 /* Pods_EasyPark.framework */,
+				A184B2D1E60EAD245D3BAAAD /* Pods_EasyParkTests.framework */,
+				5F05943A333ACE3EC5A43A66 /* Pods_EasyParkUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				DE99631422EB1A9700721BBC /* TotalBookingModel.swift */,
+				DE00B1B522F076EA004CF1A9 /* UserProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,7 +207,14 @@
 		DE99631622EB1B1F00721BBC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */,
+				DE0C794E22EF028A001348DD /* SignUpViewController.swift */,
+				DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */,
+				DE00B1B122F02750004CF1A9 /* ParkingDetailViewController.swift */,
+				DE0C795222EF059C001348DD /* LoginViewController.swift */,
+				DE0C795622EF1DA3001348DD /* MyBookingViewController.swift */,
 				DE99630C22EB111C00721BBC /* NotificationViewController.swift */,
+				DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */,
 				DE99630E22EB120200721BBC /* MapViewController.swift */,
 				DE9962E022EB053C00721BBC /* ViewController.swift */,
 			);
@@ -177,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE99630322EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyPark" */;
 			buildPhases = (
+				9EE48684020945F1E6346412 /* [CP] Check Pods Manifest.lock */,
 				DE9962D722EB053C00721BBC /* Sources */,
 				DE9962D822EB053C00721BBC /* Frameworks */,
 				DE9962D922EB053C00721BBC /* Resources */,
+				438AE7DE674B859DE0D5E4FE /* [CP] Embed Pods Frameworks */,
+				A9B297923557C9A9444362EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE99630622EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkTests" */;
 			buildPhases = (
+				C9FF950124B603936536C302 /* [CP] Check Pods Manifest.lock */,
 				DE9962EB22EB053D00721BBC /* Sources */,
 				DE9962EC22EB053D00721BBC /* Frameworks */,
 				DE9962ED22EB053D00721BBC /* Resources */,
@@ -212,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE99630922EB053D00721BBC /* Build configuration list for PBXNativeTarget "EasyParkUITests" */;
 			buildPhases = (
+				54DB15AE1158FADD2D3887CC /* [CP] Check Pods Manifest.lock */,
 				DE9962F622EB053D00721BBC /* Sources */,
 				DE9962F722EB053D00721BBC /* Frameworks */,
 				DE9962F822EB053D00721BBC /* Resources */,
@@ -275,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9962E922EB053C00721BBC /* LaunchScreen.storyboard in Resources */,
+				DEFBF42A22EEABEA000C3DCC /* GoogleService-Info.plist in Resources */,
 				DE9962E622EB053C00721BBC /* Assets.xcassets in Resources */,
 				DE9962E422EB053C00721BBC /* Main.storyboard in Resources */,
 			);
@@ -296,15 +361,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		438AE7DE674B859DE0D5E4FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54DB15AE1158FADD2D3887CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyParkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE48684020945F1E6346412 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyPark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B297923557C9A9444362EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyPark/Pods-EasyPark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9FF950124B603936536C302 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyParkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE9962D722EB053C00721BBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE00B1B222F02750004CF1A9 /* ParkingDetailViewController.swift in Sources */,
 				DE9962E122EB053C00721BBC /* ViewController.swift in Sources */,
 				DE9962DF22EB053C00721BBC /* AppDelegate.swift in Sources */,
+				DE0C794F22EF028A001348DD /* SignUpViewController.swift in Sources */,
 				DE99630D22EB111C00721BBC /* NotificationViewController.swift in Sources */,
+				DE0C795722EF1DA3001348DD /* MyBookingViewController.swift in Sources */,
+				DE00B1B622F076EA004CF1A9 /* UserProfileModel.swift in Sources */,
+				DE00B1B422F05E40004CF1A9 /* ProfileViewController.swift in Sources */,
 				DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */,
+				DEFBF42E22EEB124000C3DCC /* TableViewCell.swift in Sources */,
+				DE0C795122EF0493001348DD /* LoginSignUpViewController.swift in Sources */,
+				DE0C795322EF059C001348DD /* LoginViewController.swift in Sources */,
 				DE99630F22EB120200721BBC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +654,7 @@
 		};
 		DE99630422EB053D00721BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BED6DA03F4567D7F627FDAB /* Pods-EasyPark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +672,7 @@
 		};
 		DE99630522EB053D00721BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ABB2A6DA6640DFB8EF2790E /* Pods-EasyPark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +690,7 @@
 		};
 		DE99630722EB053D00721BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C1ABE0ED6AF319B01517F0 /* Pods-EasyParkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +711,7 @@
 		};
 		DE99630822EB053D00721BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F7D5E2F84BCEB1ECA2E5552 /* Pods-EasyParkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +732,7 @@
 		};
 		DE99630A22EB053D00721BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82257AC0F2C2E5E88D5EB1F1 /* Pods-EasyParkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +752,7 @@
 		};
 		DE99630B22EB053D00721BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A31B4F45C32F0FBABE9AE94 /* Pods-EasyParkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
