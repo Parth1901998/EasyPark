@@ -15,19 +15,31 @@ class MapViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var topLabel: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var seachBar: UISearchBar!
+    
+    @IBOutlet weak var mapHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var topView: UIView!
+    
+    @IBOutlet weak var searchBarTop: NSLayoutConstraint!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
     
     let db = Firestore.firestore()
     var parkingDetail = [TotalParkingModel]()
+    var filterData = [TotalParkingModel]()
+     var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.layer.cornerRadius = 10
          mapView.userLocation.title = "You here"
-       
+       filterData = parkingDetail
          self.navigationController?.setNavigationBarHidden(true, animated: true)
         readData()
          checkLocationServices()
@@ -95,8 +107,13 @@ class MapViewController: UIViewController{
                     malldetail.placeRating = (document.data()["PlaceRating"] as! String)
                     malldetail.placeLot = (document.data()["PlaceLot"] as! String)
                     malldetail.placeDistance = (document.data()["PlaceDistance"] as! String)
+                    
                     malldetail.placeAddress = (document.data()["PlaceAddress"] as! String)
                     malldetail.placeMoney = (document.data()["PlaceMoney"] as! String)
+                    malldetail.placeNumber = (document.data()["PlaceNumber"] as! String)
+                    
+                    malldetail.placeLotAlphabet = (document.data()["PlaceAlphabet"] as! String)
+                    malldetail.placeLotNumber = (document.data()["PlaceNumber"] as! String)
                  
                     // feching data
                     
@@ -144,38 +161,52 @@ extension MapViewController : CLLocationManagerDelegate
 
 extension MapViewController : UITableViewDelegate,UITableViewDataSource
 {
-    //MARK:- TablewView Delegate
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+    if inSearchMode
+    {
+        cell.parkImage.image = filterData[indexPath.row].placeImage
+        cell.parkTitle.text = filterData[indexPath.row].placeTitle
+        cell.parkName.text = filterData[indexPath.row].placeName
+        cell.ParkRating.text = filterData[indexPath.row].placeRating
+        cell.parkDistance.text =  filterData[indexPath.row].placeDistance
+        cell.parkLot.text = filterData[indexPath.row].placeLot
+    }
+        else
+    {
+        cell.parkImage.image = parkingDetail[indexPath.row].placeImage
+        cell.parkTitle.text = parkingDetail[indexPath.row].placeTitle
+        cell.parkName.text = parkingDetail[indexPath.row].placeName
+        cell.ParkRating.text = parkingDetail[indexPath.row].placeRating
+        cell.parkDistance.text =  parkingDetail[indexPath.row].placeDistance
+        cell.parkLot.text = parkingDetail[indexPath.row].placeLot
+    }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parkingDetail.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        
-        cell.parkImage.image = parkingDetail[indexPath.row].placeImage
-        cell.parkTitle.text = parkingDetail[indexPath.row].placeTitle
-        cell.parkName.text = parkingDetail[indexPath.row].placeName
-        cell.ParkRating.text = parkingDetail[indexPath.row].placeRating
-        cell.parkDistance.text =  parkingDetail[indexPath.row].placeDistance
-        cell.parkLot.text = parkingDetail[indexPath.row].placeLot
-        return cell
+         if inSearchMode
+         {
+            return filterData.count
+         }
+        else
+         {
+            return parkingDetail.count
+          }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
           let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        
         cell.parkImage.image = parkingDetail[indexPath.row].placeImage
         cell.parkTitle.text = parkingDetail[indexPath.row].placeTitle
         cell.parkName.text = parkingDetail[indexPath.row].placeName
         cell.ParkRating.text = parkingDetail[indexPath.row].placeRating
         cell.parkDistance.text =  parkingDetail[indexPath.row].placeDistance
         cell.parkLot.text = parkingDetail[indexPath.row].placeLot
+
         
         let ParkingDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "ParkingDetailViewController") as! ParkingDetailViewController
         
@@ -186,8 +217,43 @@ extension MapViewController : UITableViewDelegate,UITableViewDataSource
         ParkingDetailViewController.parkingAddress = parkingDetail[indexPath.row].placeAddress
         ParkingDetailViewController.mallimage = parkingDetail[indexPath.row].placeImage
         ParkingDetailViewController.userRating = parkingDetail[indexPath.row].placeRating
-        
+        ParkingDetailViewController.parkingNumber = parkingDetail[indexPath.row].placeNumber
+        ParkingDetailViewController.parkingAlphabetNumber = parkingDetail[indexPath.row].placeLotAlphabet
+        ParkingDetailViewController.parkingNumber = parkingDetail[indexPath.row].placeLotNumber
         self.navigationController?.pushViewController(ParkingDetailViewController, animated: true)
     }
     
+  }
+
+extension MapViewController : UISearchBarDelegate
+{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tableView.isHidden = true
+        mapHeightConstraint.constant = self.view.frame.height - topView.frame.height
+        topLabel.isHidden = true
+        searchBarTop.constant = -20
+        topView.backgroundColor = UIColor.clear
+        searchBar.layer.borderColor = UIColor.black.cgColor
+        searchBar.layer.borderWidth = 2
+        searchBar.layer.cornerRadius = 28
+//        searchBar.tintColor = UIColor.white
+        searchBar.backgroundImage = UIImage()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            inSearchMode = false
+            filterData = parkingDetail
+            tableView.reloadData()
+            return
+        }
+        filterData = parkingDetail.filter({ (TotalBookingModel) -> Bool in
+            inSearchMode = true
+            return TotalBookingModel.placeTitle.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+    }
 }
+    
+ 
+

@@ -13,23 +13,21 @@ import GoogleSignIn
 class ProfileViewController: UIViewController {
 
   let imagepicker = UIImagePickerController()
-   var selectedImages: UIImage?
-    
-    
-    let db = Firestore.firestore()
+    var selectedImages: UIImage?
     var uid : String = ""
     var documentid = ""
     var imageName : String = ""
     
+    let db = Firestore.firestore()
     var userProfile = [UserProfileModel]()
     
-    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userName: UILabel!
     
     @IBOutlet weak var selectedImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        readData()
         getCurrentUser()
         selectedImage.layer.cornerRadius = 60
         selectedImage.layer.masksToBounds = true
@@ -65,114 +63,47 @@ class ProfileViewController: UIViewController {
         
     }
     
-
-    @IBAction func selectImage(_ sender: UIButton) {
-        
-        imagepicker.allowsEditing = false
-        imagepicker.sourceType = .photoLibrary
-        imagepicker.delegate = self
-        imagepicker.mediaTypes = ["public.image", "public.movie"]
-        present(imagepicker, animated: true, completion: nil)
-    }
-   
-    
-    
-    @IBAction func UpdatePressed(_ sender: UIButton) {
-        
-        var ref: DocumentReference? = nil
-        ref = db.collection("Users").addDocument(data:["UserName":"\(userName.text!)","uuid": "\(uid)"])
-        { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                self.documentid = (ref?.documentID)!
-                print("Document added with ID: \(ref!.documentID)")
-                let uploadRef = Storage.storage().reference(withPath: "UserImages/\(self.documentid).jpg")
-                
-                guard let imagedata = self.selectedImage.image?.jpegData(compressionQuality: 0.75) else{return}
-                let uploadMetadata = StorageMetadata.init()
-                print(uploadRef)
-                uploadMetadata.contentType = "image/jpeg"
-                uploadRef.putData(imagedata, metadata: uploadMetadata) { (downloadMetadata, error) in
-                    if let error = error
-                    {
-                        print("oh no got an error \(error.localizedDescription)")
-                        return
-                    }
-                    print("put is complete and i got it back:\(String(describing: downloadMetadata))")
-                    
-                }
-            }
-        }
-        userName.text = " "
-    }
-    
     func readData() {
         
         let db = Firestore.firestore()
         userProfile = []
         
-        db.collection("UserName").getDocuments() { (querySnapshot, err) in
+        db.collection("Users").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
                     
                     let new = UserProfileModel()
+                    self.userName.text = "\(document.data()["UserName"] as! String)"
                     new.userName = "\(document.data()["UserName"] as! String)"
                     new.useruid = "\(document.data()["uuid"] as! String)"
-                    new.imageName = "\(document.documentID)"
+                    new.imageName = "\(self.uid)"
                     
-                    let storageRef = Storage.storage().reference(withPath: "UserImages/\(document.documentID).jpg")
+                    let storageRef = Storage.storage().reference(withPath: "UserImages/\(document.data()["uuid"] as! String).jpg")
+                    print(document.data()["uuid"] as! String)
                     storageRef.getData(maxSize: 4*1024*1024) { data, error in
                         if let error = error {
                             print("error downloading image:\(error)")
                         } else {
                             // Data for "images/island.jpg" is returned
-                            new.userimage = UIImage(data: data!)
+                            self.selectedImage.image = UIImage(data: data!)
                             self.userProfile.append(new)
-                            
                         }
                     }
                 }
             }
         }
     }
-
-}
-
-extension ProfileViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate
-{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-    {
-        
-        if let editedImage = info[.editedImage] as? UIImage {
-            
-            selectedImages = editedImage
-            
-            selectedImage.image = selectedImages!
-            
-            picker.dismiss(animated: true, completion: nil)
-            
-            
-        } else if let originalImage = info[.originalImage] as? UIImage {
-            
-            selectedImages = originalImage
-            
-            selectedImage.image = selectedImages!
-            
-        }
-        
-        guard let fileUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL else { return }
-        
-        
-        imageName = fileUrl.lastPathComponent
-        
-        
-        picker.dismiss(animated: true, completion: nil)
-        
-        
+    
+    @IBAction func EditProfilePressed(_ sender: UIButton) {
+ 
+        let EditProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+        self.navigationController?.pushViewController(EditProfileViewController, animated: true)
     }
+    
 }
+
+
 
 

@@ -21,8 +21,8 @@ class NotificationViewController: UIViewController {
     
     @IBAction func donePressed(_ sender: UIButton) {
         
-        let MapViewController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
-        self.navigationController?.pushViewController(MapViewController, animated: true)
+        let NotificationViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotificationViewController") as! NotificationViewController
+        self.navigationController?.pushViewController(NotificationViewController, animated: true)
     }
     
 }

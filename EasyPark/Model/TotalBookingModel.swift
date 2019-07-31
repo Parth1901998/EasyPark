@@ -24,5 +24,7 @@ class TotalParkingModel
     var placeAddress    : String = ""
     var placeMoney      : String = ""
     
+    var placeLotNumber : String = ""
+    var placeLotAlphabet : String = ""
 
 }

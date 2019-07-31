@@ -26,8 +26,11 @@
 		DE99630F22EB120200721BBC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99630E22EB120200721BBC /* MapViewController.swift */; };
 		DE99631222EB13D500721BBC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE99631122EB13D500721BBC /* CoreLocation.framework */; };
 		DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99631422EB1A9700721BBC /* TotalBookingModel.swift */; };
+		DEB973CE22F1A87800F03C77 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB973CD22F1A87800F03C77 /* MyBookingTableViewCell.swift */; };
 		DEFBF42A22EEABEA000C3DCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEFBF42922EEABEA000C3DCC /* GoogleService-Info.plist */; };
 		DEFBF42E22EEB124000C3DCC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */; };
+		DEFE782B22F14EA30082F327 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE782A22F14EA30082F327 /* EditProfileViewController.swift */; };
+		DEFE782D22F173EA0082F327 /* FinalBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE782C22F173EA0082F327 /* FinalBookingViewController.swift */; };
 		E56B8AC423407798AAD74AA3 /* Pods_EasyParkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F05943A333ACE3EC5A43A66 /* Pods_EasyParkUITests.framework */; };
 		F105290C0292DB935CDC024C /* Pods_EasyParkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A184B2D1E60EAD245D3BAAAD /* Pods_EasyParkTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,8 +86,11 @@
 		DE99630E22EB120200721BBC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DE99631122EB13D500721BBC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DE99631422EB1A9700721BBC /* TotalBookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBookingModel.swift; sourceTree = "<group>"; };
+		DEB973CD22F1A87800F03C77 /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
 		DEFBF42922EEABEA000C3DCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DEFE782A22F14EA30082F327 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = EasyPark/Controller/EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		DEFE782C22F173EA0082F327 /* FinalBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBookingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,8 @@
 		DE99631622EB1B1F00721BBC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DEFE782C22F173EA0082F327 /* FinalBookingViewController.swift */,
+				DEFE782A22F14EA30082F327 /* EditProfileViewController.swift */,
 				DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */,
 				DE0C794E22EF028A001348DD /* SignUpViewController.swift */,
 				DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */,
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9962E222EB053C00721BBC /* Main.storyboard */,
+				DEB973CD22F1A87800F03C77 /* MyBookingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,7 +484,10 @@
 				DE0C794F22EF028A001348DD /* SignUpViewController.swift in Sources */,
 				DE99630D22EB111C00721BBC /* NotificationViewController.swift in Sources */,
 				DE0C795722EF1DA3001348DD /* MyBookingViewController.swift in Sources */,
+				DEFE782B22F14EA30082F327 /* EditProfileViewController.swift in Sources */,
 				DE00B1B622F076EA004CF1A9 /* UserProfileModel.swift in Sources */,
+				DEFE782D22F173EA0082F327 /* FinalBookingViewController.swift in Sources */,
+				DEB973CE22F1A87800F03C77 /* MyBookingTableViewCell.swift in Sources */,
 				DE00B1B422F05E40004CF1A9 /* ProfileViewController.swift in Sources */,
 				DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */,
 				DEFBF42E22EEB124000C3DCC /* TableViewCell.swift in Sources */,

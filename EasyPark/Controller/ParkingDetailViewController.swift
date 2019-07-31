@@ -27,6 +27,8 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var parksNumber: UILabel!
     
+    @IBOutlet weak var parksAlphabetNumber: UILabel!
+    
     @IBOutlet weak var parksAddress: UILabel!
     
     @IBOutlet weak var bookNowPressed: UIButton!
@@ -39,10 +41,13 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
     var parkingDistance : String = ""
     var parkingMoney : String = ""
     var parkingNumber : String = ""
+    var parkingAlphabetNumber : String = ""
     var parkingAddress : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: - Rounding BOOk Now Button
         bookNowPressed.layer.cornerRadius = 15
         
         topImage.image = mallimage
@@ -51,15 +56,23 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
         parksTitle.text = parkingTitle
         parksDistance.text = parkingDistance
         parksMoney.text = parkingMoney
+        parksAlphabetNumber.text = parkingAlphabetNumber
         parksNumber.text = parkingNumber
         parksAddress.text = parkingAddress
       
+      
     }
- 
+    
     @IBAction func BookNow(_ sender: UIButton) {
         
-        let LoginSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginSignUpViewController") as! LoginSignUpViewController
-        self.navigationController?.pushViewController(LoginSignUpViewController, animated: true)
+        let FinalBookingViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinalBookingViewController") as! FinalBookingViewController
+        FinalBookingViewController.bookPlaceTitle = parkingTitle
+        FinalBookingViewController.bookPlace = mallimage
+        FinalBookingViewController.bookPlaceMoney = parkingMoney
+        FinalBookingViewController.bookPlaceNumber = parkingNumber
+        FinalBookingViewController.bookPlaceAlphabetNumber = parkingAlphabetNumber
+        
+        self.navigationController?.pushViewController(FinalBookingViewController, animated: true)
     }
     
     @IBAction func onBackPressed(_ sender: UIButton) {
