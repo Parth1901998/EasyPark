@@ -11,6 +11,8 @@
 		DE00B1B222F02750004CF1A9 /* ParkingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B122F02750004CF1A9 /* ParkingDetailViewController.swift */; };
 		DE00B1B422F05E40004CF1A9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */; };
 		DE00B1B622F076EA004CF1A9 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00B1B522F076EA004CF1A9 /* UserProfileModel.swift */; };
+		DE02D66622F2D4AA00B4601C /* MapMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE02D66422F2D4AA00B4601C /* MapMarker.xib */; };
+		DE02D66A22F2F16E00B4601C /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE02D66922F2F16E00B4601C /* MapMarker.swift */; };
 		DE0C794F22EF028A001348DD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C794E22EF028A001348DD /* SignUpViewController.swift */; };
 		DE0C795122EF0493001348DD /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */; };
 		DE0C795322EF059C001348DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C795222EF059C001348DD /* LoginViewController.swift */; };
@@ -65,6 +67,8 @@
 		DE00B1B122F02750004CF1A9 /* ParkingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParkingDetailViewController.swift; path = EasyPark/Controller/ParkingDetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		DE00B1B322F05E40004CF1A9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = EasyPark/Controller/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		DE00B1B522F076EA004CF1A9 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		DE02D66422F2D4AA00B4601C /* MapMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapMarker.xib; sourceTree = "<group>"; };
+		DE02D66922F2F16E00B4601C /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		DE0C794E22EF028A001348DD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE0C795022EF0493001348DD /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		DE0C795222EF059C001348DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */,
 				DE99630E22EB120200721BBC /* MapViewController.swift */,
 				DE9962E022EB053C00721BBC /* ViewController.swift */,
+				DE02D66422F2D4AA00B4601C /* MapMarker.xib */,
+				DE02D66922F2F16E00B4601C /* MapMarker.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			files = (
 				DE9962E922EB053C00721BBC /* LaunchScreen.storyboard in Resources */,
 				DEFBF42A22EEABEA000C3DCC /* GoogleService-Info.plist in Resources */,
+				DE02D66622F2D4AA00B4601C /* MapMarker.xib in Resources */,
 				DE9962E622EB053C00721BBC /* Assets.xcassets in Resources */,
 				DE9962E422EB053C00721BBC /* Main.storyboard in Resources */,
 			);
@@ -489,6 +496,7 @@
 				DEFE782D22F173EA0082F327 /* FinalBookingViewController.swift in Sources */,
 				DEB973CE22F1A87800F03C77 /* MyBookingTableViewCell.swift in Sources */,
 				DE00B1B422F05E40004CF1A9 /* ProfileViewController.swift in Sources */,
+				DE02D66A22F2F16E00B4601C /* MapMarker.swift in Sources */,
 				DE99631522EB1A9700721BBC /* TotalBookingModel.swift in Sources */,
 				DEFBF42E22EEB124000C3DCC /* TableViewCell.swift in Sources */,
 				DE0C795122EF0493001348DD /* LoginSignUpViewController.swift in Sources */,

@@ -15,6 +15,7 @@ class MapViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     
+    
     @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +27,12 @@ class MapViewController: UIViewController{
     @IBOutlet weak var topView: UIView!
     
     @IBOutlet weak var searchBarTop: NSLayoutConstraint!
+    
+    @IBOutlet weak var backConstraints: NSLayoutConstraint!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var searchLabel: UILabel!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -39,26 +46,34 @@ class MapViewController: UIViewController{
         super.viewDidLoad()
         tableView.layer.cornerRadius = 10
          mapView.userLocation.title = "You here"
+        backButton.isHidden = true
+        searchLabel.isHidden = true
        filterData = parkingDetail
+        seachBar.delegate = self
          self.navigationController?.setNavigationBarHidden(true, animated: true)
         readData()
          checkLocationServices()
+        
+//        let myViewController = MapViewController(nibName: "MapMarker", bundle: nil)
+//        self.present(myViewController, animated: true, completion: nil)
     }
+    
+
     
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
-    
+
+
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
-    
-    
+
+
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
@@ -67,8 +82,8 @@ class MapViewController: UIViewController{
             // Show alert letting the user know they have to turn this on.
         }
     }
-    
-    
+
+
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
@@ -89,6 +104,18 @@ class MapViewController: UIViewController{
         }
     }
     
+    @IBAction func backPressedButton(_ sender: UIButton) {
+        seachBar.resignFirstResponder()
+        mapHeightConstraint.constant = 141
+        topLabel.isHidden = false
+        searchBarTop.constant = 20
+       topView.backgroundColor = UIColor.init(red: 35/255, green: 246/255, blue: 191/255, alpha: 1)
+       seachBar.layer.borderWidth = 0
+        tableView.isHidden = false
+        backButton.isHidden = true
+        searchLabel.isHidden = true
+    }
+
     
     //MARK:- readData
     
@@ -147,16 +174,17 @@ class MapViewController: UIViewController{
 extension MapViewController : CLLocationManagerDelegate
 {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    
+
         guard let location = locations.last else { return }
         let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
     }
-    
-    
+
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }
+    
 }
 
 extension MapViewController : UITableViewDelegate,UITableViewDataSource
@@ -238,6 +266,79 @@ extension MapViewController : UISearchBarDelegate
         searchBar.layer.cornerRadius = 28
 //        searchBar.tintColor = UIColor.white
         searchBar.backgroundImage = UIImage()
+        backButton.isHidden = false
+         searchLabel.isHidden = false
+
+    }
+       
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //ignoring users
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+
+        let searchRequest  = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = searchBar.text
+        
+        let activeSearch = MKLocalSearch(request: searchRequest)
+        activeSearch.start { (response, error) in
+            
+            activityIndicator.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+            
+            if response == nil
+            {
+                print("ERROR")
+            }
+            else
+            {
+                //Removing annotation
+                let annotations = self.mapView.annotations
+                self.mapView.removeAnnotations(annotations)
+                
+                //Getting Data Of Location
+                let latitude = response?.boundingRegion.center.latitude
+                let longitude = response?.boundingRegion.center.longitude
+                
+                //Create Annotation
+                
+                let annotation = MKPointAnnotation()
+               
+                annotation.title = searchBar.text
+                
+                
+                annotation.coordinate = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+           
+                self.mapView.addAnnotation(annotation)
+                
+                //Zoom into annotation
+                
+                let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
+                let span = MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)
+                let region = MKCoordinateRegion(center: coordinate,span: span)
+                
+                self.mapView.setRegion(region, animated: true)
+ 
+            }
+        }
+
+    }
+    
+    
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       
+        tableView.isHidden = false
+        mapView.isHidden = false
+        topView.isHidden = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -255,5 +356,5 @@ extension MapViewController : UISearchBarDelegate
     }
 }
     
- 
+
 

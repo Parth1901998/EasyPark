@@ -57,9 +57,11 @@ class ProfileViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initial = storyboard.instantiateInitialViewController()
-        UIApplication.shared.keyWindow?.rootViewController = initial
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initial = storyboard.instantiateInitialViewController()
+//        UIApplication.shared.keyWindow?.rootViewController = initial
+        
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
     

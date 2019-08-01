@@ -12,6 +12,7 @@ target 'EasyPark' do
     pod 'Firebase/Database'
     pod 'Firebase/Analytics'
     pod 'GoogleSignIn'
+    pod 'MBCircularProgressBar'
 
   target 'EasyParkTests' do
     inherit! :search_paths

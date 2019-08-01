@@ -21,8 +21,8 @@ class NotificationViewController: UIViewController {
     
     @IBAction func donePressed(_ sender: UIButton) {
         
-        let NotificationViewController = self.storyboard?.instantiateViewController(withIdentifier: "NotificationViewController") as! NotificationViewController
-        self.navigationController?.pushViewController(NotificationViewController, animated: true)
+        let LoginSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginSignUpViewController") as! LoginSignUpViewController
+        self.navigationController?.pushViewController(LoginSignUpViewController, animated: true)
     }
     
 }

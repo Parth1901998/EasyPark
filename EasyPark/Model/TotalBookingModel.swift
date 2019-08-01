@@ -18,6 +18,7 @@ class TotalParkingModel
     var placeRating       : String = ""
     var placeLot          : String = ""
     var placeDistance     : String = ""
+    var useruid           : String = ""
     
     var placeLotMessage : String = ""
     var placeNumber     : String = ""
