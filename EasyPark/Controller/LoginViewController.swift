@@ -18,13 +18,30 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     
+         let activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          self.navigationController?.setNavigationBarHidden(true, animated: true)
          loginButton.layer.cornerRadius = 15
     }
     
+    
+    //MARK:- Loading Indicator
+    
+    func Indicator()
+    {
+        activityIndicator.style = UIActivityIndicatorView.Style.whiteLarge
+        activityIndicator.assignColor(.black)
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+    }
+    
     @IBAction func logInPressed(_ sender: UIButton) {
+        
+        Indicator()
         
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
             if error == nil{
@@ -65,6 +82,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func onBackPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        
     }
     
 }

@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         enableButton.layer.cornerRadius = 15
-     
+   
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
@@ -26,12 +26,10 @@ class ViewController: UIViewController {
     @IBAction func enableLocation(_ sender: UIButton) {
         
         
-        let MapViewController = self.storyboard?.instantiateViewController(withIdentifier: "Tabbar") as! UITabBarController
-        self.navigationController?.pushViewController(MapViewController, animated: true)
-        
+        let LoginSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginSignUpViewController") as! LoginSignUpViewController
+        self.navigationController?.pushViewController(LoginSignUpViewController, animated: true)
+ 
     }
-    
-    
     
     @IBAction func nextPressed(_ sender: UIButton) {
         

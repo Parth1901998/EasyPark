@@ -19,13 +19,15 @@ class TotalParkingModel
     var placeLot          : String = ""
     var placeDistance     : String = ""
     var useruid           : String = ""
+    var documentid        : String = ""
+    
     
     var placeLotMessage : String = ""
     var placeNumber     : String = ""
     var placeAddress    : String = ""
     var placeMoney      : String = ""
     
-    var placeLotNumber : String = ""
+    var placeLotNumber :   String = ""
     var placeLotAlphabet : String = ""
 
 }

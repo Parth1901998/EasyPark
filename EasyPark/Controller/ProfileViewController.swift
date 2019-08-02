@@ -12,7 +12,7 @@ import GoogleSignIn
 
 class ProfileViewController: UIViewController {
 
-  let imagepicker = UIImagePickerController()
+    let imagepicker = UIImagePickerController()
     var selectedImages: UIImage?
     var uid : String = ""
     var documentid = ""
@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         readData()
         getCurrentUser()
-        selectedImage.layer.cornerRadius = 60
+        selectedImage.layer.cornerRadius = 48
         selectedImage.layer.masksToBounds = true
          self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -57,13 +57,17 @@ class ProfileViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let initial = storyboard.instantiateInitialViewController()
-//        UIApplication.shared.keyWindow?.rootViewController = initial
-        
         self.navigationController?.popToRootViewController(animated: true)
         
     }
+    
+    @IBAction func EditProfilePressed(_ sender: UIButton) {
+ 
+        let EditProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+        self.navigationController?.pushViewController(EditProfileViewController, animated: true)
+    }
+    
+    //MARK:- Fetch Data from Firebase
     
     func readData() {
         
@@ -83,7 +87,7 @@ class ProfileViewController: UIViewController {
                     new.imageName = "\(self.uid)"
                     
                     let storageRef = Storage.storage().reference(withPath: "UserImages/\(document.data()["uuid"] as! String).jpg")
-                    print(document.data()["uuid"] as! String)
+                    
                     storageRef.getData(maxSize: 4*1024*1024) { data, error in
                         if let error = error {
                             print("error downloading image:\(error)")
@@ -97,13 +101,6 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func EditProfilePressed(_ sender: UIButton) {
- 
-        let EditProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
-        self.navigationController?.pushViewController(EditProfileViewController, animated: true)
-    }
-    
 }
 
 

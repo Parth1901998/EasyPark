@@ -226,10 +226,8 @@
 				DE0C795222EF059C001348DD /* LoginViewController.swift */,
 				DE0C795622EF1DA3001348DD /* MyBookingViewController.swift */,
 				DE99630C22EB111C00721BBC /* NotificationViewController.swift */,
-				DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */,
 				DE99630E22EB120200721BBC /* MapViewController.swift */,
 				DE9962E022EB053C00721BBC /* ViewController.swift */,
-				DE02D66422F2D4AA00B4601C /* MapMarker.xib */,
 				DE02D66922F2F16E00B4601C /* MapMarker.swift */,
 			);
 			path = Controller;
@@ -240,6 +238,8 @@
 			children = (
 				DE9962E222EB053C00721BBC /* Main.storyboard */,
 				DEB973CD22F1A87800F03C77 /* MyBookingTableViewCell.swift */,
+				DEFBF42D22EEB124000C3DCC /* TableViewCell.swift */,
+				DE02D66422F2D4AA00B4601C /* MapMarker.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";

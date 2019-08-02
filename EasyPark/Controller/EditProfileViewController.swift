@@ -27,9 +27,10 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrentUser()
-        selectedImage.layer.cornerRadius = 60
+        selectedImage.layer.cornerRadius = 48
         selectedImage.layer.masksToBounds = true
     }
+    
     func getCurrentUser(){
         let user = Auth.auth().currentUser
         if let user = user {
@@ -58,12 +59,12 @@ class EditProfileViewController: UIViewController {
                 print("Error adding document: \(err)")
             } else {
                 self.documentid = (ref?.documentID)!
-                print("Document added with ID: \(ref!.documentID)")
+                
                 let uploadRef = Storage.storage().reference(withPath: "UserImages/\(self.uid).jpg")
                 
                 guard let imagedata = self.selectedImage.image?.jpegData(compressionQuality: 0.75) else{return}
                 let uploadMetadata = StorageMetadata.init()
-                print(uploadRef)
+               
                 uploadMetadata.contentType = "image/jpeg"
                 uploadRef.putData(imagedata, metadata: uploadMetadata) { (downloadMetadata, error) in
                     if let error = error

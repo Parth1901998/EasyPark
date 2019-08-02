@@ -15,7 +15,6 @@ class MapViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     
-    
     @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -34,8 +33,12 @@ class MapViewController: UIViewController{
     
     @IBOutlet weak var searchLabel: UILabel!
     
+      let activityIndicator = UIActivityIndicatorView()
+    
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
+    
+    
     
     let db = Firestore.firestore()
     var parkingDetail = [TotalParkingModel]()
@@ -53,6 +56,8 @@ class MapViewController: UIViewController{
          self.navigationController?.setNavigationBarHidden(true, animated: true)
         readData()
          checkLocationServices()
+        
+    
         
 //        let myViewController = MapViewController(nibName: "MapMarker", bundle: nil)
 //        self.present(myViewController, animated: true, completion: nil)
@@ -121,7 +126,12 @@ class MapViewController: UIViewController{
     
     func readData()
     {
+     //Activity Indicator While Fetching FireStore data
+        
+      Indicator()
+        
         db.collection("NearestParking").getDocuments() { (querySnapshot, err) in
+            
             if let err = err {
                 print("Error getting documents: \(err)")
                 
@@ -167,7 +177,9 @@ class MapViewController: UIViewController{
                      self.tableView.reloadData()
                 }
             }
+            self.activityIndicator.stopAnimating()
         }
+        
     }
  
 }
@@ -248,7 +260,10 @@ extension MapViewController : UITableViewDelegate,UITableViewDataSource
         ParkingDetailViewController.parkingNumber = parkingDetail[indexPath.row].placeNumber
         ParkingDetailViewController.parkingAlphabetNumber = parkingDetail[indexPath.row].placeLotAlphabet
         ParkingDetailViewController.parkingNumber = parkingDetail[indexPath.row].placeLotNumber
+        
+        
         self.navigationController?.pushViewController(ParkingDetailViewController, animated: true)
+       
     }
     
   }
@@ -331,8 +346,15 @@ extension MapViewController : UISearchBarDelegate
 
     }
     
-    
-    
+    func Indicator()
+    {
+      
+        activityIndicator.style = UIActivityIndicatorView.Style.whiteLarge
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        

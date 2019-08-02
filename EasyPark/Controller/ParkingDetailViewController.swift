@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MapKit
 
 class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
     
@@ -44,6 +45,11 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
     var parkingAlphabetNumber : String = ""
     var parkingAddress : String = ""
     
+     let activityIndicator = UIActivityIndicatorView()
+    
+    let db = Firestore.firestore()
+    var parkingDetail = [TotalParkingModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +69,10 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
       
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        activityIndicator.stopAnimating()
+    }
+    
     @IBAction func BookNow(_ sender: UIButton) {
         
         let FinalBookingViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinalBookingViewController") as! FinalBookingViewController
@@ -72,10 +82,40 @@ class ParkingDetailViewController: UIViewController,UIScrollViewDelegate {
         FinalBookingViewController.bookPlaceNumber = parkingNumber
         FinalBookingViewController.bookPlaceAlphabetNumber = parkingAlphabetNumber
         
+        loader()
+        
         self.navigationController?.pushViewController(FinalBookingViewController, animated: true)
     }
     
     @IBAction func onBackPressed(_ sender: UIButton) {
+          activityIndicator.stopAnimating()
         self.navigationController?.popViewController(animated: true)
+      
+    }
+    
+    @IBAction func DirectionButton(_ sender: UIButton) {
+        
+       let MapViewController = self.storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        
+        self.navigationController?.pushViewController(MapViewController, animated: true)
+    }
+    
+    func loader()
+    {
+         activityIndicator.style = UIActivityIndicatorView.Style.gray
+        activityIndicator.assignColor(.black)
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+    }
+    
+}
+
+
+extension UIActivityIndicatorView {
+    func assignColor(_ color: UIColor) {
+        style = .whiteLarge
+        self.color = color
     }
 }

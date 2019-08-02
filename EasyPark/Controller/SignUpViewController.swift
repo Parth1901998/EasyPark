@@ -19,13 +19,25 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signupPressed: UIButton!
     
+      let activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         signupPressed.layer.cornerRadius = 15
     }
+    
+    func Indicator()
+    {
+        activityIndicator.style = UIActivityIndicatorView.Style.whiteLarge
+        activityIndicator.assignColor(.black)
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        self.view.addSubview(activityIndicator)
+    }
 
     @IBAction func signUpAction(_ sender: UIButton) {
-        
+         Indicator()
         if password.text != confirmPassword.text
         {
             let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
@@ -50,10 +62,12 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    activityIndicator.stopAnimating()
 }
     
     @IBAction func onBackPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        activityIndicator.stopAnimating()
     }
     
 }
